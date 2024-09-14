@@ -1,0 +1,193 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  /*background images*/
+.profilebg {
+    background-image: url('images/background/profilebg.jpg'); /* Add your image URL here */
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Full height of the viewport (optional) */
+    color: white; /* Optional: Set text color for readability */
+    display: flex;
+    justify-content: center;
+}
+
+.workbg {
+    background-image: url('images/background/internbg.jpg'); /* Add your image URL here */
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 70vh; /* Full height of the viewport (optional) */
+    color: white; /* Optional: Set text color for readability */  
+}
+
+.educationbg {
+    background-image: url('images/background/classroombg.jpg'); /* Add your image URL here */
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    min-height: 100vh; /* Full height of the viewport (optional) */
+    color: white; /* Optional: Set text color for readability */ 
+}
+
+.skillsbg{
+    background-image: url('images/background/profilebg.jpg'); /* Add your image URL here */
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    min-height: 100vh; /* Full height of the viewport (optional) */
+    color: white; /* Optional: Set text color for readability */ 
+}
+
+.projectbg {
+    background-image: url('images/background/projectbg.jpg'); /* Add your image URL here */
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    min-height: 100vh; /* Full height of the viewport (optional) */
+    color: white; /* Optional: Set text color for readability */ 
+}
+
+.certificatebg {
+    background-image: url('images/background/certificatebg.jpg'); /* Add your image URL here */
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    min-height: 100vh; /* Full height of the viewport (optional) */
+    color: white; /* Optional: Set text color for readability */ 
+}
+
+.contactbg{
+    background-image: url('images/background/contactbg.jpg'); /* Add your image URL here */
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 60vh; /* Full height of the viewport (optional) */
+    color: white; /* Optional: Set text color for readability */
+    display: flex;
+    justify-content: center;
+}
+
+/*sliding cards*/
+@keyframes slideInFromLeft {
+    0% {
+        left: -100%; /* Start off-screen */
+    }
+    100% {
+        left: 0; /* End at the normal position */
+    }
+}
+
+.text-slide-auto {
+    position: relative;
+    left: -100%; /* Initially off-screen */
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.5s ease-in-out; /* Smooth opacity transition */
+}
+
+.text-slide-auto.slide-in {
+    animation: slideInFromLeft 1s ease-in forwards; /* Trigger animation when element is in view */
+    opacity: 1; /* Show element */
+}
+
+
+.text-slide-auto:nth-child(1).slide-in {
+    animation-delay: 0.2s; /* Delay for first card */
+}
+
+.text-slide-auto:nth-child(2).slide-in {
+    animation-delay: 0.4s; /* Delay for second card */
+}
+
+.text-slide-auto:nth-child(3).slide-in {
+    animation-delay: 0.6s; /* Delay for third card */
+}
+
+
+
+
+
+
+
+/*profile image*/
+/* Image container */
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Grow image effect */
+.grow-image {
+    width: 300px; /* Set initial image size */
+    opacity: 0;
+    transform: scale(0.5); /* Start smaller */
+    transition: opacity 2s ease, transform 2s ease; /* Smooth transition */
+}
+
+.grow-image.show {
+    opacity: 1;
+    transform: scale(1); /* Grow to full size */
+}
+
+
+
+/* No justify content for smaller screens */
+.mylintro {
+    display: block; /* Or any default layout you want for small screens */
+}
+
+.card {
+    background-color: transparent; /* No background color */
+    box-shadow: none; /* Remove any shadow */
+    border: none; /* Remove borders */
+    color: white; /* Ensure the content is visible over the darkened background image */
+  }
+  
+  /* For Text Inside the Card */
+  .card .card-body {
+    color: white; /* Adjust content color to be visible */
+  }
+
+
+
+
+
+ 
+  /*skills section*/
+  
+  /* Initial State for Columns */
+  .col1 {
+    background-color:none;
+    color:white;
+    border:none;
+    text-align: center;
+    opacity: 0;    /* Initially hidden */
+    transform: scale(0);    /* Initially scaled down */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    font-weight: bolder;
+    border: solid rgb(0, 255, 255);
+    font-family: verdana;
+    font-style:italic;
+  }
+  
+  /* Animation Class */
+  .grow {
+    opacity: 1;
+    transform: scale(1);
+  }
+  h1{
+    font-family: algerian;
+  }
+ a{
+    font-family: verdana;
+ }
+
+ 
+
